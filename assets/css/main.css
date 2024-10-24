@@ -1,0 +1,668 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body {
+  background-color: #f6d7a6;
+}
+
+html {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #f2c377;
+  height: 15rem;
+  padding: 1rem 4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-sikkim {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+
+.icon-sikkim > img {
+  width: 118px;
+}
+
+.sikkim-khadi-icon > img {
+  width: 104px;
+}
+
+.icon-khadiindia > img {
+  width: 152px;
+}
+
+.mobileNavBar {
+  padding: 1rem;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2c377;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  z-index: 999;
+}
+
+.mobileNavBar img {
+  width: 4rem;
+}
+
+.NavMobile {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f2c377;
+  height: 0.5rem;
+}
+
+.hamburger {
+  display:none;
+}
+
+.bar1,
+.bar3 {
+  background-color: rgb(112, 73, 11);
+  height:1.5px;
+  width:30px;
+  margin:6px;
+  border-radius:25px;
+} 
+
+.bar2 {
+  background-color: rgb(112, 73, 11);
+  height:1.5px;
+  width:15px;
+  margin:6px;
+  border-radius:25px;
+  transform: translateX(100%)
+}
+
+.mobile-header {
+  padding: 1.5rem;
+  background-color: #f2c377;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-header-title {
+  background-color: #f2c377;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: rgb(112, 73, 11);
+  padding: 0 0 1rem 0;
+}
+
+.mobilenav {
+  background-color: #f2c377;
+  width:100%;
+  height:100vh;
+  display:flex; 
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  position:fixed; 
+  z-index:999;
+  top:0;
+  right:-2000px;
+  padding:16px;
+  text-transform: uppercase;
+  transition:transform 0.5s
+}
+
+.mobilenav a {
+text-decoration:none; 
+color: rgb(112, 73, 11);
+margin: 15px;;
+font-size:23px; 
+}
+
+.close-button {
+  width:25px;
+  position:absolute;
+  top: 30px;
+  right:30px;
+}
+
+.navopen {
+  transform: translateX(-2000px );
+}
+
+.icon-khadiindia {
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+
+.navigation {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: #f5d096;
+}
+
+.navigation > li {
+  list-style-type: none;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+
+  transition: background-color 0.5s ease;
+}
+
+.nav__active {
+  border: 1px solid #F1BB67;
+  background-color: #F6D7A6;
+}
+
+.navigation > li:hover {
+  background-color: #dc9016;
+}
+
+.navigation svg {
+  padding-top: 0.3rem;
+}
+
+.navigation a {
+  color: #70490b;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.navigation a:hover { 
+  color: white;
+}
+
+.carousel {
+  background-color: #f2c377;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.fade-out {
+  transition: opacity 1s ease-in-out; 
+}
+
+.portraits {
+  margin-top: -0.26rem; /* experimental */
+  padding: 1.5rem;
+  background-color:#f8deb5;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.portraits .clipped {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.portraits__titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portraits__titles p {
+  color: rgb(112, 73, 11);
+  font-size: 1.6rem;
+}
+
+.portraits__titles p:nth-child(2) {
+  font-weight: 900;
+}
+
+.portraits__titles img:first-child {
+  margin-bottom: 1.5rem;
+}
+
+
+/* welcome section */
+.welcome {
+  padding: 2rem 1.5rem;
+  background-color: #f5d096;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.6rem;
+}
+
+.welcome .welcome-text {
+  background-color: rgb(205, 134, 20);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.5rem;
+  display: inline;
+
+}
+
+.welcome .welcome-contents {
+    padding: 1rem 2rem;
+  color: rgb(112, 73, 11);
+}
+
+.welcome ol {
+    margin-left: 8rem;
+}
+
+.events {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f8deb5;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.events .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.events .card {
+  padding: 20px; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 33%;
+}
+
+.card .card-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #CD8614;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: #f9e5c5;
+    padding: 1rem;
+    border: 0.5px solid #ea9f2a;
+    border-radius: 9px;
+    flex: 0 0 auto;
+    align-self: flex-start;
+  }
+
+.card a {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #000080;
+  }
+
+
+.events .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f5d096;
+}
+
+.hr {
+  border: none;
+  height: 1px; 
+  background-color: #f8deb5;
+  width: 100%; 
+}
+
+.address {
+  padding: 1.5rem;
+}
+
+.address img {
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.address li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.address p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #422b06;
+}
+
+.links {
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+}
+
+.links p {
+  color: #422b06;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 0.75rem;
+}
+
+.itemLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemLinks a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #422b06;
+  margin-bottom: 0.5rem;
+}
+
+.social_media {
+  padding: 2.5rem;
+}
+
+.social_media p {
+  color: #422b06;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.social_media_links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social_media_links img {
+  width: 2rem;
+}
+
+.copyright {
+  text-align: center;
+  background-color: #f5d096;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1.5rem;
+  color: #cd8514;
+}
+
+.back-button {
+  display: none;
+  position: fixed;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #fcf3e4;
+  color: #322105;
+  text-decoration: none;
+  bottom: -15rem; /* Adjust as needed */
+  opacity: 0;
+  left: 30%; /* Position horizontally in the middle */
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  z-index: 555; /* Ensure it's above other content */
+  transition: all 0.3s ease;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+@media (min-width:810px) {
+    .hr {
+      display: none;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: #f5d096;
+    }
+
+    .address {
+      padding: 3rem;
+    }
+
+    .address img {
+      width: 2.5rem;
+    }
+
+    .address p {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .links {
+      padding-top: 3rem;
+      padding-left: 0.5rem;
+    }
+
+    .links p {
+      font-size: 2rem;
+    }
+
+    .itemLinks a {
+      font-size: 1.6rem;
+    }
+
+    .social_media {
+      padding: 3.5rem;
+    }
+
+    .social_media p {
+      /* font-size: 1.6rem; */
+      display: none;
+    }
+
+    .social_media_links img {
+      width: 1.3rem;
+    }
+
+    .social_media_links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .twitter::after {
+      content: "\00A0Twitter";
+      font-size: 1.8rem;
+      color: #422b06;
+    }
+
+    .facebook::after {
+      content: "\00A0 Facebook";
+      font-size: 1.8rem;
+      color: #422b06;
+    }
+
+    .instagram::after {
+      content: "\00A0Instagram";
+      font-size: 1.8rem;
+      color: #422b06;
+    }
+    .copyright {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+}
+
+@media  (max-width:810px) {
+
+    .header {
+      padding: 1rem 1rem;
+    }
+
+    .mobile-header-title {
+      font-size: 2.75rem;
+    }
+
+    .navigation {
+      display:none;
+    }
+
+    .title {
+      display: none;
+    }
+
+   .hamburger {
+      display:block;
+      transform: translateY(15px);
+    } 
+
+    /* .portraits .clipped {  */
+    /*   width: 150px; */
+    /* } */
+  
+    .welcome .welcome-contents {
+      padding: 1rem 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .welcome ol {
+      margin-top: 1rem;
+      margin-left: 4rem;
+      font-size: 1.6rem;
+    }
+
+    .welcome ol > li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .portraits {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portraits__titles img:first-child {
+      margin-bottom: 0.5rem;
+    }
+
+    .portraits__titles p:nth-child(3) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .icon-sikkim > img {
+      width: 88px;
+    }
+
+    .sikkim-khadi-icon > img {
+      width: 72px;
+      transform: translateY(1.8rem);
+    }
+
+    .icon-khadiindia > img {
+      width: 112px;
+    }
+
+    .mobile-header-title {
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hamburger {
+      display:block;
+      transform: translateY(15px);
+    }
+    .portraits .clipped { 
+      width: 17.5rem;
+    }
+
+    .welcome {
+      padding: 2rem 1.5rem;
+      background-color: #f5d096;
+
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      font-size: 1.6rem;
+    }
+
+    .welcome .welcome-text {
+      font-weight: 500;
+      font-size: 1.8rem;
+      padding: 2rem 4rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    .welcomeTo {
+      font-size: 1.2rem;
+    }
+
+    .welcome .welcome-contents {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+      margin-bottom: 5px;
+    }
+
+    .welcome ol {
+      margin: 1rem auto 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    .welcome ol > li {
+      margin-bottom: 1rem;
+    }
+
+    .events {
+      flex-direction: column;
+    }
+    .events .card {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .card .card-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+    .card a {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+    .hidden {
+      display: none;
+    }
+  }
